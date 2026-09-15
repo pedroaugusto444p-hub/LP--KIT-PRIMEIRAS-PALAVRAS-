@@ -1,0 +1,8 @@
+{
+  "name": "Kit Primeiras Palavras",
+  "description": "Página de vendas do Kit Primeiras Palavras com atividades de alfabetização e apoio para crianças em fase de leitura.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
