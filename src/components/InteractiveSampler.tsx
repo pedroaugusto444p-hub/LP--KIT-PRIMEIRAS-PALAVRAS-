@@ -9,11 +9,11 @@ interface WordChallenge {
 }
 
 const CHALLENGES: WordChallenge[] = [
-  { word: "BOLA", syllables: ["BO", "LA"], imageEmoji: "⚽", hint: "Brinquedo redondo para chutar ou jogar" },
-  { word: "CASA", syllables: ["CA", "SA"], imageEmoji: "🏠", hint: "Onde a gente mora com a família" },
-  { word: "PATO", syllables: ["PA", "TO"], imageEmoji: "🦆", hint: "Ave que nada na lagoa e faz quá-quá" },
-  { word: "GATO", syllables: ["GA", "TO"], imageEmoji: "🐱", hint: "Amigo peludo que faz miau" },
-  { word: "SAPO", syllables: ["SA", "PO"], imageEmoji: "🐸", hint: "Pula na lagoa e não lava o pé" },
+  { word: "BOLA", syllables: ["BO", "LA"], imageEmoji: "⚽", hint: "Objeto redondo para patear o jugar" },
+  { word: "CASA", syllables: ["CA", "SA"], imageEmoji: "🏠", hint: "Donde vivimos con la familia" },
+  { word: "PATO", syllables: ["PA", "TO"], imageEmoji: "🦆", hint: "Ave que nada en el estanque y hace cuac-cuac" },
+  { word: "GATO", syllables: ["GA", "TO"], imageEmoji: "🐱", hint: "Amigo peludo que hace miau" },
+  { word: "SAPO", syllables: ["SA", "PO"], imageEmoji: "🐸", hint: "Salta en el estanque y atrapa moscas" },
 ];
 
 export function InteractiveSampler() {
@@ -33,7 +33,7 @@ export function InteractiveSampler() {
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text.toLowerCase());
-      utterance.lang = "pt-BR";
+      utterance.lang = "es-ES";
       utterance.rate = 0.85;
       utterance.pitch = 1.1;
       window.speechSynthesis.speak(utterance);
@@ -50,7 +50,7 @@ export function InteractiveSampler() {
       if (updated.join("") === challenge.word) {
         setIsSuccess(true);
         setTimeout(() => {
-          speak(challenge.word + "! Muito bem!");
+          speak(challenge.word + "! ¡Muy bien!");
         }, 300);
       } else {
         setTimeout(() => {
@@ -75,23 +75,23 @@ export function InteractiveSampler() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-teal/20 pb-4">
         <div>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-coral px-3 py-1 text-xs font-black tracking-wide text-white uppercase">
-            <Sparkles size={14} /> Mini-demonstração interativa
+            <Sparkles size={14} /> Mini demostración interactiva
           </span>
           <h3 className="mt-2 text-xl font-bold text-ink">
-            Experimente como a criança aprende: <span className="text-coral">Monte a Palavra</span>
+            Experimenta cómo aprende el niño: <span className="text-coral">Construye la palabra</span>
           </h3>
           <p className="text-xs text-muted-foreground">
-            No kit impresso, ela recorta as fichas coloridas e posiciona na folha com você.
+            En el kit impreso, el niño recorta las fichas de colores y las coloca en la hoja contigo.
           </p>
         </div>
         <button
           type="button"
           onClick={() => speak(challenge.word)}
           className="inline-flex items-center gap-2 self-start sm:self-auto rounded-lg bg-card px-3.5 py-2 text-xs font-bold text-teal border border-border shadow-xs hover:bg-teal-soft transition-colors cursor-pointer"
-          title="Ouvir palavra"
+          title="Escuchar palabra"
         >
           <Volume2 size={16} />
-          Ouvir pronúncia
+          Escuchar pronunciación
         </button>
       </div>
 
@@ -126,20 +126,20 @@ export function InteractiveSampler() {
         {isSuccess ? (
           <div className="mt-4 flex flex-col items-center gap-3">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal px-4 py-1.5 text-xs font-black text-white shadow-sm animate-bounce">
-              <CheckCircle2 size={15} /> Parabéns! Você formou {challenge.word}!
+              <CheckCircle2 size={15} /> ¡Felicitaciones! ¡Formaste {challenge.word}!
             </span>
             <button
               type="button"
               onClick={nextChallenge}
               className="mt-1 inline-flex items-center gap-2 rounded-lg bg-sun px-4 py-2 text-xs font-black text-ink shadow-xs hover:brightness-105 transition-all cursor-pointer"
             >
-              Próxima palavra <Sparkles size={14} />
+              Siguiente palabra <Sparkles size={14} />
             </button>
           </div>
         ) : (
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
             <span className="w-full text-xs font-bold text-muted-foreground mb-1">
-              Toque nas sílabas na ordem correta:
+              Toca las sílabas en el orden correcto:
             </span>
             {pool.map((syl, idx) => {
               const timesInSelected = selectedSyllables.filter((s) => s === syl).length;
@@ -167,7 +167,7 @@ export function InteractiveSampler() {
                 type="button"
                 onClick={reset}
                 className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-card text-muted-foreground hover:text-ink transition-colors cursor-pointer"
-                title="Recomeçar"
+                title="Reiniciar"
               >
                 <RotateCcw size={16} />
               </button>

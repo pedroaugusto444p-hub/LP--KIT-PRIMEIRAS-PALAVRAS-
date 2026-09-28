@@ -5,23 +5,23 @@ import { motion, AnimatePresence } from "motion/react";
 const testimonialImages = [
   {
     id: 1,
-    url: "https://i.ibb.co/b5SmmhTj/Chat-GPT-Image-12-de-set-de-2026-21-15-04-1.png",
-    alt: "Depoimento real 1",
+    url: "https://i.ibb.co/WpjFqcJz/Chat-GPT-Image-19-de-set-de-2026-23-22-47-1.png",
+    alt: "Testimonio real 1",
   },
   {
     id: 2,
-    url: "https://i.ibb.co/WNDvmrRw/Chat-GPT-Image-12-de-set-de-2026-21-15-04-2.png",
-    alt: "Depoimento real 2",
+    url: "https://i.ibb.co/S4rcjwtW/Chat-GPT-Image-19-de-set-de-2026-23-22-47-2.png",
+    alt: "Testimonio real 2",
   },
   {
     id: 3,
-    url: "https://i.ibb.co/CKN80F08/Chat-GPT-Image-12-de-set-de-2026-21-15-04-3.png",
-    alt: "Depoimento real 3",
+    url: "https://i.ibb.co/8nQ6nr38/Chat-GPT-Image-19-de-set-de-2026-23-22-47-3.png",
+    alt: "Testimonio real 3",
   },
   {
     id: 4,
-    url: "https://i.ibb.co/bRg2QV6d/Chat-GPT-Image-12-de-set-de-2026-21-15-04-4.png",
-    alt: "Depoimento real 4",
+    url: "https://i.ibb.co/4wHNzgc0/Chat-GPT-Image-19-de-set-de-2026-23-22-47-4.png",
+    alt: "Testimonio real 4",
   },
 ];
 
@@ -98,7 +98,7 @@ export function TestimonialsSection() {
       {/* Headline única */}
       <div className="text-center max-w-2xl mx-auto mb-6">
         <h2 className="text-2xl md:text-3xl font-bold font-display text-ink leading-tight">
-          O que dizem os pais que já praticam com o kit
+          Lo que dicen los padres que ya practican con el kit
         </h2>
       </div>
 
@@ -138,7 +138,7 @@ export function TestimonialsSection() {
                 e.stopPropagation();
                 prevSlide();
               }}
-              aria-label="Depoimento anterior"
+              aria-label="Testimonio anterior"
               className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-card/95 text-ink border border-border shadow-md transition-all hover:scale-105 hover:text-coral hover:bg-card cursor-pointer z-10"
             >
               <ChevronLeft size={22} />
@@ -150,7 +150,7 @@ export function TestimonialsSection() {
                 e.stopPropagation();
                 nextSlide();
               }}
-              aria-label="Próximo depoimento"
+              aria-label="Siguiente testimonio"
               className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-card/95 text-ink border border-border shadow-md transition-all hover:scale-105 hover:text-coral hover:bg-card cursor-pointer z-10"
             >
               <ChevronRight size={22} />
@@ -167,7 +167,7 @@ export function TestimonialsSection() {
                 key={item.id}
                 type="button"
                 onClick={() => goToSlide(index)}
-                aria-label={`Ir para depoimento ${index + 1}`}
+                aria-label={`Ir al testimonio ${index + 1}`}
                 className={`transition-all duration-300 rounded-full cursor-pointer ${
                   isActive
                     ? "w-7 h-2.5 bg-coral"
@@ -200,7 +200,7 @@ export function TestimonialsSection() {
               <button
                 type="button"
                 onClick={() => setLightboxImage(null)}
-                aria-label="Fechar"
+                aria-label="Cerrar"
                 className="absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black transition-colors cursor-pointer"
               >
                 <X size={18} />
@@ -208,7 +208,7 @@ export function TestimonialsSection() {
 
               <img
                 src={lightboxImage}
-                alt="Depoimento ampliado"
+                alt="Testimonio ampliado"
                 className="max-h-[85vh] w-auto object-contain rounded-lg"
                 referrerPolicy="no-referrer"
               />

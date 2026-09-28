@@ -107,7 +107,7 @@ export function ActivitiesCarousel() {
         <button
           type="button"
           onClick={goToPrev}
-          aria-label="Imagem anterior"
+          aria-label="Imagen anterior"
           className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-md transition-all opacity-80 hover:opacity-100 hover:scale-105 active:scale-95 cursor-pointer border border-slate-200"
         >
           <ChevronLeft size={22} className="stroke-[2.5]" />
@@ -116,7 +116,7 @@ export function ActivitiesCarousel() {
         <button
           type="button"
           onClick={goToNext}
-          aria-label="Próxima imagem"
+          aria-label="Siguiente imagen"
           className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-md transition-all opacity-80 hover:opacity-100 hover:scale-105 active:scale-95 cursor-pointer border border-slate-200"
         >
           <ChevronRight size={22} className="stroke-[2.5]" />
@@ -130,7 +130,7 @@ export function ActivitiesCarousel() {
             key={img.id}
             type="button"
             onClick={() => goToIndex(idx)}
-            aria-label={`Ir para atividade ${idx + 1}`}
+            aria-label={`Ir a la actividad ${idx + 1}`}
             className={`h-1.5 rounded-full transition-all cursor-pointer ${
               idx === currentIndex ? "w-6 bg-coral" : "w-1.5 bg-slate-300 hover:bg-slate-400"
             }`}

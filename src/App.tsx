@@ -16,8 +16,6 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import heroImage from "./assets/hero-novo.png";
-import solutionImage from "./assets/kit-solucao.png";
 import {
   PRICE,
   FULL_VALUE,
@@ -31,7 +29,6 @@ import {
   bonuses,
   faqs,
 } from "./data";
-import { InteractiveSampler } from "./components/InteractiveSampler";
 import { TestimonialsSection } from "./components/TestimonialsSection";
 import { SalesNotification } from "./components/SalesNotification";
 import { ActivitiesCarousel } from "./components/ActivitiesCarousel";
@@ -60,14 +57,14 @@ export default function App() {
         <div id="inicio" className="page-shell grid items-center gap-10 pb-16 pt-8 md:grid-cols-[1.05fr_.95fr] md:pb-24 md:pt-12">
           <div className="max-w-2xl">
             <p className="eyebrow">
-              <Sparkles size={15} /> Para praticar em casa, com leveza
+              <Sparkles size={15} /> Para practicar en casa, con calma y sin presión
             </p>
             <h1>
-              Ajude seu filho a dar sentido às letras — <span>um passo de cada vez.</span>
+              Ayuda a tu hijo a darle sentido a las letras — <span>un paso a la vez.</span>
             </h1>
             <p className="hero-copy">
-              Um sistema simples e progressivo de atividades para praticar coordenação motora, reconhecimento de letras,
-              sons, sílabas e palavras de forma visual e divertida.
+              Un sistema simple y progresivo de actividades para practicar coordinación motora, reconocimiento de letras,
+              sonidos, sílabas y palabras de forma visual y divertida.
             </p>
             <ul className="hero-benefits">
               {quickBenefits.map((benefit) => (
@@ -84,7 +81,7 @@ export default function App() {
                 onClick={scrollToOffer}
                 className="cta-button cta-green w-full sm:w-auto cursor-pointer"
               >
-                <span>QUERO ACESSAR O KIT AGORA</span>
+                <span>OBTENER ACCESO AL KIT AHORA</span>
                 <ArrowRight aria-hidden="true" />
               </button>
               <button
@@ -92,28 +89,29 @@ export default function App() {
                 onClick={scrollToOffer}
                 className="text-xs font-bold text-teal hover:underline self-center sm:self-auto cursor-pointer bg-transparent border-0"
               >
-                Ver todos os materiais inclusos ↓
+                Ver todos los materiales incluidos ↓
               </button>
             </div>
 
             <p className="microcopy">
-              <Download /> Acesso digital imediato após o pagamento · Garantia incondicional de 7 dias
+              <Download /> Acceso digital inmediato después del pago · Garantía incondicional de 7 días
             </p>
           </div>
 
           <div className="hero-visual">
             <div className="image-frame">
               <img
-                src={heroImage}
-                alt="Kit Primeiras Palavras - Atividades educativas e ilustradas para alfabetização"
+                src="https://i.ibb.co/BKP1cjGy/01-Kit-Primeras-Palabras.png"
+                alt="Kit Primeras Palabras - Actividades educativas e ilustradas para alfabetización"
                 width={609}
                 height={640}
                 className="transition-transform duration-500 hover:scale-[1.02] w-full h-auto object-cover"
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="floating-note">
               <Heart fill="currentColor" />
-              <span>Aprender também pode ser um momento de carinho e conexão.</span>
+              <span>Aprender también puede ser un momento de cariño y conexión.</span>
             </div>
           </div>
         </div>
@@ -123,12 +121,12 @@ export default function App() {
       <section className="section problem-section">
         <div className="page-shell">
           <div className="section-heading">
-            <p className="eyebrow">Isso acontece por aí?</p>
+            <p className="eyebrow">¿Esto también pasa en tu casa?</p>
             <h2>
-              Seu filho reconhece as letras… mas ainda tem dificuldade para <em>juntar tudo?</em>
+              ¿Tu hijo reconoce las letras… pero todavía le cuesta <em>juntarlo todo?</em>
             </h2>
             <p className="text-muted-foreground">
-              Entre saber o nome de uma letra e conseguir formar uma palavra, existem pequenas habilidades que precisam de prática.
+              Entre saber el nombre de una letra y conseguir formar una palabra, hay pequeñas habilidades que necesitan práctica.
             </p>
           </div>
 
@@ -142,8 +140,8 @@ export default function App() {
           </div>
 
           <p className="bridge-copy">
-            Se você pensou <strong>“é exatamente assim aqui em casa”</strong>, saiba que não falta esforço. Muitas vezes,
-            falta apenas <u>um caminho claro e sequencial para praticar</u>.
+            Si pensaste <strong>“así pasa en mi casa”</strong>, no significa que falte esfuerzo. Muchas veces,
+            solo falta <u>un camino claro y ordenado para practicar</u>.
           </p>
         </div>
       </section>
@@ -152,18 +150,18 @@ export default function App() {
       <section className="section belief-section">
         <div className="page-shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div className="section-heading text-left m-0">
-            <p className="eyebrow justify-start">A leitura é uma construção</p>
+            <p className="eyebrow justify-start">La lectura es una construcción</p>
             <h2>
-              Mais exercícios não significam, necessariamente, <em>mais clareza.</em>
+              Más ejercicios no siempre significan <em>más claridad.</em>
             </h2>
             <p className="text-muted-foreground mt-2">
-              Antes de pedir que uma criança leia uma palavra, vale ajudá-la a construir as habilidades que tornam essa
-              leitura possível. Sem pressa, sem pressão e sem transformar a casa em uma sala de aula estressante.
+              Antes de pedirle a un niño que lea una palabra, es importante ayudarlo a construir las habilidades que hacen
+              posible esa lectura. Sin prisa, sin presión y sin convertir la casa en una clase estresante.
             </p>
           </div>
 
-          <div className="progress-path" aria-label="Progressão das habilidades">
-            {["Traçar", "Reconhecer sons", "Formar sílabas", "Montar palavras", "Avançar para a leitura"].map((label, i) => (
+          <div className="progress-path" aria-label="Progresión de las habilidades">
+            {["Trazar", "Reconocer sonidos", "Formar sílabas", "Construir palabras", "Avanzar hacia la lectura"].map((label, i) => (
               <div className="path-step" key={label}>
                 <span>{i + 1}</span>
                 <strong>{label}</strong>
@@ -180,34 +178,35 @@ export default function App() {
           <div className="solution-visual flex justify-center items-center">
             <div className="image-frame max-w-[480px] w-full">
               <img
-                src={solutionImage}
-                alt="Kit Primeiras Palavras - Visão geral dos cadernos e materiais práticos"
+                src="https://i.ibb.co/BKP1cjGy/01-Kit-Primeras-Palabras.png"
+                alt="Kit Primeras Palabras - Vista general de los cuadernos y materiales"
                 width={640}
                 height={640}
                 className="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]"
+                referrerPolicy="no-referrer"
               />
             </div>
           </div>
 
           <div>
-            <p className="eyebrow justify-start">Uma solução prática para a rotina real</p>
+            <p className="eyebrow justify-start">Una solución práctica para la rutina real</p>
             <h2>
-              Apresentamos o <em>Kit Primeiras Palavras</em>
+              Te presentamos el <em>Kit Primeras Palabras</em>
             </h2>
             <p className="lead">
-              Um conjunto organizado de atividades para você utilizar em casa — sem inventar exercícios do zero e sem
-              passar horas procurando materiais soltos e desordenados na internet.
+              Un conjunto organizado de actividades para usar en casa — sin inventar ejercicios desde cero y sin
+              pasar horas buscando materiales sueltos y desordenados en internet.
             </p>
             <p className="text-muted-foreground mt-3">
-              Em vez de escolher uma folha aleatória a cada dia, você tem propostas lúdicas que acompanham diferentes
-              etapas: do controle do lápis às primeiras experiências de leitura de palavras reais.
+              En lugar de elegir una hoja al azar cada día, tendrás propuestas lúdicas que acompañan diferentes
+              etapas: desde el control del lápiz hasta las primeras experiencias de lectura de palabras reales.
             </p>
 
             <div className="soft-callout">
               <PackageCheck />
               <span className="text-xs md:text-sm">
-                <strong>Não é apenas um PDF de atividades.</strong> É uma sequência simples para saber o que praticar
-                agora e quais possibilidades explorar depois com tranquilidade.
+                <strong>No es solo un PDF de actividades.</strong> Es una secuencia simple para saber qué practicar
+                ahora y qué explorar después con tranquilidad.
               </span>
             </div>
 
@@ -216,7 +215,7 @@ export default function App() {
               onClick={scrollToOffer}
               className="cta-button cta-green cursor-pointer"
             >
-              <span>QUERO CONHECER O KIT</span>
+              <span>QUIERO CONOCER EL KIT</span>
               <ArrowRight />
             </button>
           </div>
@@ -227,12 +226,12 @@ export default function App() {
       <section className="section method-section">
         <div className="page-shell">
           <div className="section-heading">
-            <p className="eyebrow">O caminho dentro do kit</p>
+            <p className="eyebrow">El camino dentro del kit</p>
             <h2>
-              Quatro etapas simples para praticar <em>sem pular a base.</em>
+              Cuatro etapas simples para practicar <em>sin saltarse la base.</em>
             </h2>
             <p className="text-muted-foreground">
-              Cada grupo de atividades tem um propósito claro e prepara o terreno com segurança para o próximo.
+              Cada grupo de actividades tiene un propósito claro y prepara el terreno con seguridad para el siguiente paso.
             </p>
           </div>
 
@@ -261,12 +260,12 @@ export default function App() {
       <section className="section activities-section">
         <div className="page-shell">
           <div className="section-heading">
-            <p className="eyebrow">Do papel para a prática</p>
+            <p className="eyebrow">Del papel a la práctica</p>
             <h2>
-              Veja algumas atividades que seu filho <em>poderá praticar</em>
+              Mira algunas actividades que tu hijo <em>podrá practicar</em>
             </h2>
             <p className="text-muted-foreground">
-              Propostas curtas, visuais e variadas para favorecer a participação ativa e o interesse natural da criança.
+              Propuestas cortas, visuales y variadas para favorecer la participación activa y el interés natural del niño.
             </p>
           </div>
 
@@ -284,9 +283,6 @@ export default function App() {
               </article>
             ))}
           </div>
-
-          {/* Interactive Sampler Game */}
-          <InteractiveSampler />
         </div>
       </section>
 
@@ -294,30 +290,30 @@ export default function App() {
       <section className="section parent-section">
         <div className="page-shell parent-inner">
           <div>
-            <p className="eyebrow eyebrow-light">Feito para pais e responsáveis</p>
+            <p className="eyebrow eyebrow-light">Hecho para padres y responsables</p>
             <h2 className="text-primary-foreground">
-              Você <em>não precisa ser professor</em> para usar.
+              No necesitas <em>ser maestro/a</em> para usarlo.
             </h2>
             <p>
-              Você não precisa montar aula, estudar métodos complexos ou preparar tudo com antecedência. Escolha uma
-              atividade, imprima 1 ou 2 páginas e acompanhe a criança por 10 a 15 minutos com leveza.
+              No necesitas preparar una clase, estudiar métodos complejos ni organizar todo con anticipación. Elige una
+              actividad, imprime 1 o 2 páginas y acompaña al niño durante 10 a 15 minutos con calma.
             </p>
           </div>
           <ul>
             <li>
-              <Check /> Atividades prontas, diretas e fáceis de entender
+              <Check /> Actividades listas, directas y fáciles de entender
             </li>
             <li>
-              <Check /> Imprima apenas o que precisar naquele dia
+              <Check /> Imprime solo lo que necesites ese día
             </li>
             <li>
-              <Check /> Poucos minutos para organizar a rotina
+              <Check /> Pocos minutos para organizar la rutina
             </li>
             <li>
-              <Check /> Use no seu ritmo e nos horários da família
+              <Check /> Úsalo a tu ritmo y en los horarios de tu familia
             </li>
             <li>
-              <Check /> Chega de pesquisar uma atividade nova e solta todo dia
+              <Check /> Se acabó buscar una actividad nueva y suelta todos los días
             </li>
           </ul>
         </div>
@@ -327,13 +323,13 @@ export default function App() {
       <section className="section skills-section">
         <div className="page-shell">
           <div className="section-heading">
-            <p className="eyebrow">Aprendizagem em várias frentes</p>
+            <p className="eyebrow">Aprendizaje en varias áreas</p>
             <h2>
-              Habilidades importantes, praticadas de forma <em>integrada.</em>
+              Habilidades importantes, practicadas de forma <em>integrada.</em>
             </h2>
             <p className="text-muted-foreground">
-              O kit oferece oportunidades ricas de prática. O desenvolvimento acontece no ritmo de cada criança, com
-              repetição positiva, acolhimento e celebração das pequenas conquistas.
+              El kit ofrece oportunidades ricas de práctica. El desarrollo sucede al ritmo de cada niño, con
+              repetición positiva, acompañamiento y celebración de las pequeñas conquistas.
             </p>
           </div>
 
@@ -354,12 +350,12 @@ export default function App() {
       <section className="section offer-stack-section">
         <div className="page-shell">
           <div className="section-heading">
-            <p className="eyebrow">Tudo o que você recebe</p>
+            <p className="eyebrow">Todo lo que recibes</p>
             <h2>
-              Não é uma atividade solta. É uma <em>caixa completa de possibilidades.</em>
+              No es una actividad suelta. Es una <em>caja completa de posibilidades.</em>
             </h2>
             <p className="text-muted-foreground">
-              O kit principal e todos os bônus práticos para variar a prática e acompanhar diferentes momentos do aprendizado.
+              El kit principal y todos los bonos prácticos para variar la práctica y acompañar diferentes momentos del aprendizaje.
             </p>
           </div>
 
@@ -378,7 +374,7 @@ export default function App() {
                   ) : (
                     <>
                       <Icon />
-                      <span>[ {index === 0 ? "KIT PRINCIPAL" : `BÔNUS ${index}`} ]</span>
+                      <span>[ {index === 0 ? "KIT PRINCIPAL" : `BONO ${index}`} ]</span>
                     </>
                   )}
                 </div>
@@ -392,7 +388,7 @@ export default function App() {
                   </strong>
                 </div>
                 <div className="bonus-value">
-                  <small>Valor avulso</small>
+                  <small>Valor individual</small>
                   <b>{item.value}</b>
                 </div>
               </article>
@@ -408,8 +404,8 @@ export default function App() {
       <section id="oferta" className="section price-section scroll-mt-6">
         <div className="page-shell price-layout">
           <div className="price-context">
-            <p className="eyebrow">Uma biblioteca pronta para usar</p>
-            <h2>Se cada material fosse adquirido separadamente…</h2>
+            <p className="eyebrow">Una biblioteca lista para usar</p>
+            <h2>Si cada material se comprara por separado…</h2>
             <div className="price-lines">
               {bonuses.map((item) => (
                 <div key={item.title}>
@@ -419,19 +415,19 @@ export default function App() {
               ))}
             </div>
             <div className="total-line">
-              <span>Valor total percebido</span>
+              <span>Valor total percibido</span>
               <strong>{FULL_VALUE}</strong>
             </div>
           </div>
 
           <div className="checkout-card">
-            <span className="offer-tag">Condição promocional de lançamento</span>
+            <span className="offer-tag">Condición promocional de lanzamiento</span>
 
             {/* Imagem do Kit no Card */}
             <div className="mt-4 mb-3 overflow-hidden rounded-xl border border-border/80 shadow-sm bg-white p-2">
               <img
                 src="https://i.ibb.co/4RLDk10s/Chat-GPT-Image-11-de-set-de-2026-22-26-05.png"
-                alt="Kit Alfabetização Completo com Bônus"
+                alt="Kit Primeras Palabras Completo con Bonos"
                 className="w-full h-auto max-h-[260px] object-contain mx-auto rounded-lg"
                 referrerPolicy="no-referrer"
                 loading="eager"
@@ -439,31 +435,31 @@ export default function App() {
             </div>
 
             <p className="not-price">
-              Mas você não vai pagar <s>{FULL_VALUE}</s>
+              Pero no vas a pagar <s>{FULL_VALUE}</s>
             </p>
-            <p className="today-label">Acesse hoje por apenas</p>
+            <p className="today-label">Accede hoy por solo</p>
             <div className="main-price">
-              <small>R$</small>
-              <strong>19</strong>
+              <small>US$</small>
+              <strong>9</strong>
               <div>
-                <b>,90</b>
-                <span>pagamento único</span>
+                <b>.90</b>
+                <span>pago único</span>
               </div>
             </div>
 
-            {/* Lista de Benefícios e Inclusões */}
+            {/* Lista de Beneficios e Inclusiones */}
             <div className="checkout-copy-list text-left mt-5 pt-4 border-t border-border/80">
               <ul className="text-xs font-semibold text-ink">
                 {[
-                  "Acesso imediato após a compra",
-                  "Envio do material por e-mail",
-                  "Suporte via WhatsApp e e-mail",
-                  "7 dias de garantia",
+                  "Acceso inmediato después de la compra",
+                  "Envío del material por correo electrónico",
+                  "Soporte por WhatsApp y correo electrónico",
+                  "7 días de garantía",
                   "Material 100% digital",
-                  "Pronto para imprimir",
-                  "Acesso pelo celular, tablet ou computador",
-                  "5 bônus inclusos",
-                  "Uso simples em casa",
+                  "Listo para imprimir",
+                  "Acceso desde celular, tablet o computadora",
+                  "5 bonos incluidos",
+                  "Uso simple en casa",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-ink">
                     <CheckCircle2 size={16} className="text-teal shrink-0" />
@@ -472,24 +468,24 @@ export default function App() {
                 ))}
               </ul>
 
-              {/* Bônus Exclusivos Destacados */}
+              {/* Bonos Exclusivos Destacados */}
               <div className="checkout-bonus-box">
                 <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-amber-300/80">
                   <p className="text-xs font-black uppercase tracking-wider text-amber-900 flex items-center gap-1.5 m-0">
                     <Sparkles size={15} className="text-amber-600 shrink-0" />
-                    <span>5 Bônus Exclusivos Inclusos</span>
+                    <span>5 Bonos Exclusivos Incluidos</span>
                   </p>
                   <span className="bg-amber-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
-                    Hoje Grátis
+                    Hoy Gratis
                   </span>
                 </div>
                 <ul className="text-xs font-bold text-ink">
                   {[
-                    "Caderno de Grafismo Divertido",
-                    "Cartões de Sílabas",
-                    "Jogo Monte a Palavra",
-                    "Desafios de Leitura",
-                    "Atividades Educativas sem Tela",
+                    "Cuaderno de Grafismo Divertido",
+                    "Tarjetas de Sílabas",
+                    "Juego Construye la Palabra",
+                    "Desafíos de Lectura",
+                    "Actividades Educativas sin Pantallas",
                   ].map((bonusItem) => (
                     <li key={bonusItem}>
                       <div className="flex items-center gap-2">
@@ -499,7 +495,7 @@ export default function App() {
                         <span className="font-bold text-ink">{bonusItem}</span>
                       </div>
                       <span className="text-[10px] font-black text-emerald-800 bg-emerald-100/90 px-2 py-0.5 rounded-md uppercase tracking-wider border border-emerald-300/60">
-                        Grátis
+                        Gratis
                       </span>
                     </li>
                   ))}
@@ -507,19 +503,19 @@ export default function App() {
               </div>
             </div>
 
-            {/* Botão de Ação na Parte de Baixo */}
+            {/* Botón de Acción en la Parte Inferior */}
             <a
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="cta-button checkout-button cta-green cursor-pointer mt-6"
             >
-              <span>QUERO ACESSAR O KIT AGORA</span>
+              <span>QUIERO ACCEDER AL KIT AHORA</span>
               <ArrowRight />
             </a>
 
             <p className="future-price">
-              Esta condição especial pode ser atualizada sem aviso prévio. Não cobramos mensalidade.
+              Esta condición especial puede actualizarse sin previo aviso. No cobramos mensualidad.
             </p>
           </div>
         </div>
@@ -532,23 +528,21 @@ export default function App() {
             <Download />
           </div>
           <div>
-            <p className="eyebrow">Por que o valor é tão acessível?</p>
-            <h2>Digital por escolha. Acessível por propósito.</h2>
+            <p className="eyebrow">¿Por qué el precio es tan accesible?</p>
+            <h2>Digital por elección. Accesible por propósito.</h2>
             <p className="text-muted-foreground mt-2">
-              Como o material é 100% digital, não existem custos de gráfica centralizada, embalagem, estoque físico ou frete
-              dos Correios. Isso nos permite oferecer o kit completo por um valor simbólico de apenas {PRICE}, facilitando o
-              acesso de famílias de todo o Brasil.
+              Como el material es 100% digital, no existen costos de impresión centralizada, empaque, inventario físico ni envío. Esto nos permite ofrecer el kit completo por un precio accesible de solo {PRICE}, facilitando el acceso a familias de diferentes países.
             </p>
           </div>
           <div className="digital-points">
             <span>
-              <FileText /> Arquivos em PDF de alta qualidade
+              <FileText /> Archivos en PDF de alta calidad
             </span>
             <span>
-              <Printer /> Você imprime em casa só o que for usar
+              <Printer /> Imprime en casa solo lo que vayas a usar
             </span>
             <span>
-              <PackageCheck /> Sem espera de frete ou risco de extravio
+              <PackageCheck /> Sin espera de envío ni riesgo de extravío
             </span>
           </div>
         </div>
@@ -559,19 +553,17 @@ export default function App() {
         <div className="page-shell guarantee-inner">
           <div className="guarantee-seal">
             <ShieldCheck />
-            <strong>7 DIAS</strong>
-            <span>DE GARANTIA</span>
+            <strong>7 DÍAS</strong>
+            <span>DE GARANTÍA</span>
           </div>
           <div>
-            <p className="eyebrow">Seu risco é absolutamente zero</p>
-            <h2>Conheça o material com total tranquilidade.</h2>
+            <p className="eyebrow">Tu riesgo es absolutamente cero</p>
+            <h2>Conoce el material con total tranquilidad.</h2>
             <p className="text-muted-foreground mt-2">
-              Após a compra, você tem <strong>7 dias inteiros de garantia incondicional</strong>. Se dentro desse período
-              você entender que o Kit Primeiras Palavras não supriu suas expectativas, basta solicitar o reembolso que
-              devolvemos 100% do seu dinheiro.
+              Después de la compra, tienes <strong>7 días completos de garantía incondicional</strong>. Si dentro de ese período entiendes que el Kit Primeras Palabras no cumple tus expectativas, puedes solicitar el reembolso y te devolvemos el 100% de tu dinero.
             </p>
             <p className="legal-note">
-              Sem burocracia, sem letras miúdas: uma garantia transparente e respeitosa com a sua família.
+              Sin burocracia y sin letras pequeñas: una garantía transparente y respetuosa con tu familia.
             </p>
           </div>
         </div>
@@ -582,14 +574,14 @@ export default function App() {
         <div className="page-shell faq-layout">
           <div className="faq-intro">
             <p className="eyebrow">Antes de decidir</p>
-            <h2>Dúvidas comuns, respostas diretas.</h2>
-            <p>Veja se o kit combina com o momento atual do seu filho.</p>
+            <h2>Preguntas frecuentes</h2>
+            <p>Mira si el kit combina con el momento actual de tu hijo.</p>
             <button
               type="button"
               onClick={scrollToOffer}
               className="cta-button cta-green cursor-pointer"
             >
-              <span>TENHO INTERESSE NO KIT</span>
+              <span>QUIERO EL KIT AHORA</span>
               <ArrowRight />
             </button>
           </div>
@@ -618,20 +610,19 @@ export default function App() {
       {/* Closing Inspiration Section */}
       <section className="section closing-section">
         <div className="page-shell closing-inner">
-          <p className="eyebrow eyebrow-light">Um pequeno momento que cabe na rotina</p>
+          <p className="eyebrow eyebrow-light">Un pequeño momento que cabe en la rutina</p>
           <h2>
-            Imagine transformar alguns minutos do dia em um momento divertido de aprendizado{" "}
-            <em>com seu filho.</em>
+            Imagina transformar algunos minutos del día en un momento divertido de aprendizaje{" "}
+            <em>con tu hijo.</em>
           </h2>
           <p>
-            Sem cobrança para fazer tudo correndo. Sem a obrigação de acertar de primeira. Apenas uma atividade pronta,
-            sua presença acolhedora e a chance de comemorar cada pequena descoberta juntos.
+            Sin presión para hacerlo todo rápido. Sin obligación de acertar a la primera. Solo una actividad lista,
+            tu presencia y la oportunidad de celebrar cada pequeño descubrimiento juntos.
           </p>
           <div className="closing-quote">
             <Heart fill="currentColor" />
             <span>
-              Porque, quando o caminho fica mais simples e estruturado, sobra mais espaço para encorajar, brincar e
-              aprender.
+              Porque cuando el camino se vuelve más simple y estructurado, queda más espacio para animar, jugar y aprender.
             </span>
           </div>
         </div>
@@ -643,13 +634,13 @@ export default function App() {
           <div className="brand-mark">
             <span className="brand-icon">Aa</span>
             <span>
-              Primeiras <strong>Palavras</strong>
+              Primeras <strong>Palabras</strong>
             </span>
           </div>
           <p className="text-center md:text-left">
-            Material educativo complementar para uso familiar e apoio pedagógico em casa.
+            Material educativo complementario para uso familiar y apoyo pedagógico en casa.
           </p>
-          <p>© {new Date().getFullYear()} Kit Primeiras Palavras. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Kit Primeras Palabras. Todos los derechos reservados.</p>
         </div>
       </footer>
 

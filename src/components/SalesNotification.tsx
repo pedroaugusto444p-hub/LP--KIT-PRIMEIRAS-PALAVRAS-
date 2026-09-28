@@ -6,7 +6,7 @@ import { CHECKOUT_URL } from "../data";
 interface SaleEvent {
   name: string;
   city: string;
-  state: string;
+  country: string;
   item: string;
   timeAgo: string;
 }
@@ -14,45 +14,45 @@ interface SaleEvent {
 const SALES_DATA: SaleEvent[] = [
   {
     name: "Juliana M.",
-    city: "Campinas",
-    state: "SP",
-    item: "Kit Primeiras Palavras",
-    timeAgo: "há 2 min",
+    city: "Guadalajara",
+    country: "México",
+    item: "Kit Primeras Palabras",
+    timeAgo: "hace 2 min",
   },
   {
-    name: "Patrícia S.",
-    city: "Belo Horizonte",
-    state: "MG",
-    item: "Kit + 5 Bônus",
-    timeAgo: "há 4 min",
+    name: "Patricia S.",
+    city: "Bogotá",
+    country: "Colombia",
+    item: "Kit + 5 Bonos",
+    timeAgo: "hace 4 min",
   },
   {
     name: "Mariana R.",
-    city: "Curitiba",
-    state: "PR",
+    city: "Santiago",
+    country: "Chile",
     item: "Kit Completo",
-    timeAgo: "há 7 min",
+    timeAgo: "hace 7 min",
   },
   {
     name: "Camila T.",
-    city: "São Paulo",
-    state: "SP",
-    item: "Kit Primeiras Palavras",
-    timeAgo: "há 3 min",
+    city: "Buenos Aires",
+    country: "Argentina",
+    item: "Kit Primeras Palabras",
+    timeAgo: "hace 3 min",
   },
   {
     name: "Renata B.",
-    city: "Fortaleza",
-    state: "CE",
-    item: "Kit + Bônus",
-    timeAgo: "há 8 min",
+    city: "Lima",
+    country: "Perú",
+    item: "Kit + Bonos",
+    timeAgo: "hace 8 min",
   },
   {
     name: "Fernanda L.",
-    city: "Porto Alegre",
-    state: "RS",
-    item: "Kit Primeiras Palavras",
-    timeAgo: "há 5 min",
+    city: "Montevideo",
+    country: "Uruguay",
+    item: "Kit Primeras Palabras",
+    timeAgo: "hace 5 min",
   },
 ];
 
@@ -145,7 +145,7 @@ export function SalesNotification() {
                 <span className="text-muted-foreground font-normal text-[9px]">· {current.timeAgo}</span>
               </div>
               <p className="text-[11px] font-medium text-slate-800 truncate leading-snug mt-0.5">
-                <strong className="font-bold">{current.name}</strong> ({current.state}) comprou
+                <strong className="font-bold">{current.name}</strong> ({current.city}) compró
               </p>
             </div>
 
@@ -153,7 +153,7 @@ export function SalesNotification() {
             <button
               type="button"
               onClick={handleDismiss}
-              aria-label="Fechar notificação"
+              aria-label="Cerrar notificación"
               className="shrink-0 p-0.5 text-slate-400 hover:text-slate-700 rounded transition-colors"
             >
               <X size={12} />

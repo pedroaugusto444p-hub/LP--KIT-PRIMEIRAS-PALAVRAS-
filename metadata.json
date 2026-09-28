@@ -1,6 +1,6 @@
 {
-  "name": "Kit Primeiras Palavras",
-  "description": "Página de vendas do Kit Primeiras Palavras com atividades de alfabetização e apoio para crianças em fase de leitura.",
+  "name": "Kit Primeras Palabras",
+  "description": "Página de ventas del Kit Primeras Palabras con actividades de alfabetización para practicar en casa con calma y sin presión.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
